@@ -18,10 +18,8 @@ u1.age = 22;
 u1.greet();
 
 
-// =====================================================
-// 2️⃣ Constructor
+//  Constructor
 // Initialize properties when object is created
-// =====================================================
 
 class UserWithConstructor {
   name: string;
@@ -42,11 +40,9 @@ const u2 = new UserWithConstructor("Virat", 35);
 u2.greet();
 
 
-// =====================================================
-// 3️⃣ Access Modifiers (public, private)
+// Access Modifiers (public, private)
 // public → accessible everywhere (default)
 // private → only inside the class
-// =====================================================
 
 class BankAccount {
   public accountHolder: string; // accessible outside
@@ -72,10 +68,8 @@ acc.showBalance();
 // console.log(acc.balance); ❌ Error: private property
 
 
-// =====================================================
-// 4️⃣ Protected Modifier
+// Protected Modifier
 // protected → accessible inside class + subclasses
-// =====================================================
 
 class Employee {
   protected salary: number;
@@ -97,10 +91,8 @@ mgr.showSalary();
 // console.log(mgr.salary); ❌ Error: protected not accessible outside
 
 
-// =====================================================
-// 5️⃣ Getters and Setters
+// Getters and Setters
 // Control read/write access to private data
-// =====================================================
 
 class Person {
   private _age: number = 0;
@@ -126,11 +118,9 @@ console.log(p.age); // calls getter
 p.age = -5;      // invalid value
 
 
-// =====================================================
-// 6️⃣ Static Members
+// Static Members
 // Belong to class itself, not object
 // Access using ClassName.member
-// =====================================================
 
 class MathUtil {
   static PI: number = 3.14;
@@ -144,11 +134,9 @@ console.log("PI:", MathUtil.PI);
 console.log("Square:", MathUtil.square(5));
 
 
-// =====================================================
-// 7️⃣ Abstract Classes
+// Abstract Classes
 // Cannot create object directly
 // Must be extended & implement abstract methods
-// =====================================================
 
 abstract class Shape {
   // abstract method (no implementation)
@@ -175,15 +163,3 @@ console.log("Circle Area:", c.area());
 // const s = new Shape(); ❌ Error: cannot instantiate abstract class
 
 
-/*
-========================================================
-Summary:
-- Classes: blueprint for objects
-- Constructor: initialize values on creation
-- public/private: control visibility
-- protected: accessible in subclass
-- getters/setters: controlled access + validation
-- static: class-level members (no object needed)
-- abstract: base class blueprint, must be extended
-========================================================
-*/
